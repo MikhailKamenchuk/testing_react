@@ -7,9 +7,8 @@ const element = (
       <h1 className="greeting__title">Hello, world!</h1>
       <p className="greeting__text">I'm learning React</p>
   </div>
-)
-
-ReactDOM.render(
-  element,
-  document.getElementById('root')
 );
+const rootElement = document.querySelector('#root');
+
+
+ReactDOM.render(element, rootElement);
