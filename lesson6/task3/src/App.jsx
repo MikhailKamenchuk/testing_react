@@ -1,11 +1,11 @@
 import React from 'react';
 
-import ColorPicker from './ColorPicker';
+import Page from './Page';
 
 const App = () => {
   return(
     <>
-      <ColorPicker />
+      <Page />
     </>
   )
 }
