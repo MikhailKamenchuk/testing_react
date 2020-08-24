@@ -14,10 +14,9 @@ class ColorPicker extends React.Component {
     }
   }
 
-  setColorName = e => {
-    const targetColor = e.currentTarget.getAttribute('datacolor');
+  setColorName = color => {
     this.setState({
-      targetColor
+      targetColor: color
     })
   }
 
@@ -33,20 +32,17 @@ class ColorPicker extends React.Component {
         </div>
         <div>
           <button
-            onMouseOver={e => this.setColorName(e)}
+            onMouseOver={() => this.setColorName(colors.coral)}
             onMouseOut={() => this.clearColorName()}
-            className="picker__button picker__button_coral"
-            datacolor={colors.coral}></button>
+            className="picker__button picker__button_coral"></button>
           <button
-            onMouseOver={e => this.setColorName(e)}
+            onMouseOver={() => this.setColorName(colors.aqua)}
             onMouseOut={() => this.clearColorName()}
-            className="picker__button picker__button_aqua"
-            datacolor={colors.aqua}></button>
+            className="picker__button picker__button_aqua"></button>
           <button
-            onMouseOver={e => this.setColorName(e)}
+            onMouseOver={() => this.setColorName(colors.bisque)}
             onMouseOut={() => this.clearColorName()}
-            className="picker__button picker__button_bisque"
-            datacolor={colors.bisque}></button>
+            className="picker__button picker__button_bisque"></button>
         </div>
       </div>
     )
