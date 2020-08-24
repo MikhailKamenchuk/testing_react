@@ -1,11 +1,11 @@
 import React from 'react';
 
-import ColorPicker from './ColorPicker';
+import Auth from './Auth';
 
 const App = () => {
   return(
     <>
-      <ColorPicker />
+      <Auth />
     </>
   )
 }

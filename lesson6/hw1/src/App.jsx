@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Status from './Status';
+import Auth from './Auth';
 
 const App = () => {
   return(
     <>
-      <Status />
+      <Auth />
     </>
   )
 }
