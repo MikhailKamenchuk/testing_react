@@ -1,11 +1,11 @@
 import React from 'react';
 
-import ColorPicker from './ColorPicker';
+import Status from './Status';
 
 const App = () => {
   return(
     <>
-      <ColorPicker />
+      <Status />
     </>
   )
 }
