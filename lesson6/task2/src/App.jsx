@@ -1,11 +1,11 @@
 import React from 'react';
 
-import ColorPicker from './ColorPicker';
+import Mailbox from './Mailbox';
 
 const App = () => {
   return(
     <>
-      <ColorPicker />
+      <Mailbox unreadMessages={[1]}/>
     </>
   )
 }
