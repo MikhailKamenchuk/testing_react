@@ -3,7 +3,7 @@ import Message from './Message';
 
 const texts = {
   text1: "Hello, world!",
-  text2: 'Another exciting text',
+  text2: 'Another exciting text.',
 }
 
 class ColorPicker extends React.Component {
