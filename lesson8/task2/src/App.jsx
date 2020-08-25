@@ -1,39 +1,28 @@
 import React from 'react';
 
-import TransactionsList from './TransactionsList';
-const transactions = [
-  {
-      id: "id-0",
-      from: "USD",
-      to: "EUR",
-      amount: 1200,
-      rate: 0.8,
-      time: "2019-01-10T17:08:35.447Z",
-  },
-  {
-      id: "id-1",
-      from: "USD",
-      to: "UAH",
-      amount: 100000,
-      rate: 25.7,
-      time: "2019-01-10T18:22:35.447Z",
-  },
-  {
-      id: "id-2",
-      from: "EUR",
-      to: "USD",
-      amount: 100,
-      rate: 1.1,
-      time: "2019-01-10T17:01:35.447Z",
-  },
-];
+import Clock from './Clock';
 
-const App = () => {
-  return(
-    <>
-      <TransactionsList transactions={transactions}/>
-    </>
-  )
+class App extends React.Component {
+  state = {
+    visible: true
+  }
+
+  toggleVisible = () => this.setState({
+    visible: !this.state.visible
+  })
+  render() {
+    console.log(this.state.visible)
+    return (
+      <>
+        <button className="btn" onClick={this.toggleVisible}>Hide Clocks</button>
+        {this.state.visible && <>
+          <Clock location={'New York'} offset={-5} />
+          <Clock location={'Kyiv'} offset={2} />
+          <Clock location={'London'} offset={0} />
+        </>}
+      </>
+    )
+  }
 }
 
 export default App
