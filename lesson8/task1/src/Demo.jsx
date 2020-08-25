@@ -24,13 +24,13 @@ class Demo extends Component {
     return (
       <div>
         <div>
-          <button className="btn" onClick={this.show}>
+          <button onClick={this.show}>
             Show
           </button>
-          <button className="btn" onClick={this.hide}>
+          <button onClick={this.hide}>
             Hide
           </button>
-          <button className="btn" onClick={this.update}>
+          <button onClick={this.update}>
             Update
           </button>
         </div>
