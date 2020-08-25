@@ -25,7 +25,7 @@ class ConnectionStatus extends React.Component {
   render() {
     const {status} = this.state;
     const classNames = status !== 'online' ? "status status_offline" : "status";
-    return <div className={classNames}>{status}</div>
+    return <div className={classNames}>{status.charAt(0).toUpperCase() + status.slice(1)}</div>
   }
 }
 
