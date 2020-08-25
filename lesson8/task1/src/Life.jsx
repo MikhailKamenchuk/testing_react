@@ -10,6 +10,7 @@ class Life extends React.Component {
   }
   shouldComponentUpdate(nextProps, nextState){
     console.log('decide to render or not to render')
+    return this.props !== nextProps
   }
   componentDidUpdate(prevProps, prevState){
     console.log('some updates based on new props')
@@ -19,13 +20,7 @@ class Life extends React.Component {
   }
   render(){
     console.log('return React element to build DOM')
-    return (
-      <ul className="transactions">
-        <li className="transaction">{this.props.transactions[0]}</li>
-        <li className="transaction">{this.props.transactions[1]}</li>
-        <li className="transaction">{this.props.transactions[2]}</li>
-      </ul>
-    )
+    return <div className="number">{this.props.number}</div>;
   }
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Life from './Life';
+import Demo from './Demo';
 
 const App = () => {
   return(
     <>
-      <Life transactions={[1,2,4]}/>
+      <Demo />
     </>
   )
 }
