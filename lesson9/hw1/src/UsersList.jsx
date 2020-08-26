@@ -7,26 +7,21 @@ class UsersList extends React.Component {
     super(props);
     this.state = {
       filterText: '',
-      count: null,
-      filteredList: null
     }
   }
 
   handleChange = e => {
-    const filteredList = [...this.props.users].filter(user =>
-      (user.name.toLowerCase()).includes(e.target.value.toLowerCase()))
-
     this.setState({
       filterText: e.target.value,
-      filteredList,
-      count: filteredList.length
     })
   }
 
   render() {
-    const { filterText, count, filteredList } = this.state;
+    const { filterText } = this.state;
+    const filteredList = [...this.props.users].filter(user =>
+      (user.name.toLowerCase()).includes(filterText.toLowerCase()));
     const usersList = !filteredList ? this.props.users : filteredList
-
+    const count = usersList.length;
     return (
       <div>
         <Filter filterText={filterText} count={count} onChange={this.handleChange} />
