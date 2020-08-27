@@ -1,20 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-
-const Expand = ({ isVisibleContent, children, title, toggleVisibleContent }) => (
+const Expand = ({ isVisibleContent, children, title, toggleVisibleContent }) => {
+  return (
     <div className="expand border">
       <div className="expand__header">
         <span className="expand__title">{title}</span>
         <button className="expand__toggle-btn" onClick={toggleVisibleContent}>
-          {
-            !isVisibleContent
-              ? <FontAwesomeIcon icon={faChevronDown} />
-              : <FontAwesomeIcon icon={faChevronUp} />
-          }
+          {!isVisibleContent
+            ? <i className="fas fa-chevron-up" />
+            : <i className="fas fa-chevron-down" />}
         </button>
       </div>
       <div className="expand__content">
@@ -22,11 +17,12 @@ const Expand = ({ isVisibleContent, children, title, toggleVisibleContent }) => 
       </div>
     </div>
   )
+}
 
-Expand.propTypes = { 
-  isVisibleContent: PropTypes.bool.isRequired, 
-  children: PropTypes.element.isRequired, 
-  title: PropTypes.string, 
+Expand.propTypes = {
+  isVisibleContent: PropTypes.bool.isRequired,
+  children: PropTypes.element.isRequired,
+  title: PropTypes.string,
   toggleVisibleContent: PropTypes.func.isRequired
 }
 
