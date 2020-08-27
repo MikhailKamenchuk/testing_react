@@ -1,16 +1,28 @@
 import React from 'react';
 
-import UserForm from './UserForm';
+import Expand from './Expand';
 
 class App extends React.Component {
+  state = {
+    isVisibleContent: true
+  }
 
-  createUser = user => console.log(user);
+  toggleVisibleContent = () => this.setState({
+    isVisibleContent: !this.state.isVisibleContent
+  })
 
   render() {
     return (
-      <>
-        <UserForm onSubmit={this.createUser} />
-      </>
+      <div className="app">
+        <Expand
+          title='Some title'
+          isVisibleContent={this.state.isVisibleContent}
+          toggleVisibleContent = {this.toggleVisibleContent}
+        >
+          <p>Hooks are a new addition in React 16.8. They let you use state and other React features without writing a
+        class.</p>
+        </Expand>
+      </div>
     )
   }
 }
