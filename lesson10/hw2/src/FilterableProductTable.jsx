@@ -11,13 +11,17 @@ class FilterableProductTable extends React.Component {
     };
   }
 
-  handleChange = e => {
-    const {name, value, type, checked} = e.target;
-    const newValue = type === 'checkbox' ? checked : value;
+  handleFilterTextChange = (filterText) => {
     this.setState({
-      [name]: newValue
+      filterText: filterText,
     });
-  }
+  };
+
+  handleInStockChange = (inStockOnly) => {
+    this.setState({
+      inStockOnly: inStockOnly,
+    });
+  };
 
   render() {
     return (
@@ -25,8 +29,8 @@ class FilterableProductTable extends React.Component {
         <SearchBar
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
-          handleChange={this.handleChange}
-        />
+          onFilterTextChange={this.handleFilterTextChange}
+          onInStockChange={this.handleInStockChange}        />
         <ProductTable
           products={this.props.products}
           filterText={this.state.filterText}
