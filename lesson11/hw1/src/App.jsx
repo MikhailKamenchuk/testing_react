@@ -4,7 +4,7 @@ import Expand from './Expand';
 
 class App extends React.Component {
   state = {
-    isVisibleContent: true
+    isVisibleContent: false
   }
 
   toggleVisibleContent = () => this.setState({
