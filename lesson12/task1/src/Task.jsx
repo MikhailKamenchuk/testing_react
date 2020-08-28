@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Task = ({ id, text, done, onStatusChange, onDelete }) => {
+const Task = ({ id, text, done, onChange, onDelete }) => {
   const classes = classNames("list-item", { "list-item_done": done })
   return (
     <li className={classes}>
@@ -10,7 +10,7 @@ const Task = ({ id, text, done, onStatusChange, onDelete }) => {
         type="checkbox"
         className="list-item__checkbox"
         defaultChecked={done}
-        onChange={() => onStatusChange(id)}
+        onChange={() => onChange(id)}
       />
       <span className="list-item__text">{text}</span>
       <button className="list-item__delete-btn" onClick={() => onDelete(id)}></button>
@@ -40,7 +40,7 @@ Task.propTypes = {
   id: PropTypes.string, 
   text: PropTypes.string, 
   done: PropTypes.bool.isRequired, 
-  onStatusChange: PropTypes.func.isRequired, 
+  onChange: PropTypes.func.isRequired, 
   onDelete: PropTypes.func.isRequired
 }
 

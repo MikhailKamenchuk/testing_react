@@ -56,7 +56,7 @@ class TasksList extends React.Component {
           {updatedTasks.map(task =>
             <Task
               key={task.id}
-              onStatusChange={this.handleStatusTaskChange}
+              onChange={this.handleStatusTaskChange}
               onDelete={this.handleTaskDelete}
               {...task} />)}
         </ul>
