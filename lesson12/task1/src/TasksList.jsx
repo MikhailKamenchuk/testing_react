@@ -29,7 +29,7 @@ class TasksList extends React.Component {
     createTask(newTask).then(() => this.fetchTasks())
   }
 
-  handleStatusTaskChange = id => {
+  handleTaskStatusChange = id => {
     const { done, text } = this.state.tasks.find(task => task.id === id);
     const updatedTask = {
       text,
@@ -56,7 +56,7 @@ class TasksList extends React.Component {
           {updatedTasks.map(task =>
             <Task
               key={task.id}
-              onChange={this.handleStatusTaskChange}
+              onChange={this.handleTaskStatusChange}
               onDelete={this.handleTaskDelete}
               {...task} />)}
         </ul>
