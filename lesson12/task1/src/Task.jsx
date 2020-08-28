@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Task = ({ id, text, done, onChange, onDelete }) => {
-  const classes = classNames("list-item", { "list-item_done": done })
+  const listItemClasses = classNames("list-item", { "list-item_done": done })
   return (
-    <li className={classes}>
+    <li className={listItemClasses}>
       <input
         type="checkbox"
         className="list-item__checkbox"
