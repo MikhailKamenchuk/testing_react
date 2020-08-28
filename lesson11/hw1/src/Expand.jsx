@@ -13,14 +13,17 @@ class Expand extends React.PureComponent {
   render() {
     const { children, title } = this.props;
     const { isVisibleContent } = this.state;
+    const arrows = isVisibleContent
+    ? (<i className="fas fa-chevron-up" />)
+    : (<i className="fas fa-chevron-down" />)
+    debugger
     return (
       <div className="expand border">
         <div className="expand__header">
           <span className="expand__title">{title}</span>
           <button className="expand__toggle-btn" onClick={this.toggleVisibleContent}>
-            {isVisibleContent
-              ? <i className="fas fa-chevron-up" />
-              : <i className="fas fa-chevron-down" />}
+            
+            {arrows}
           </button>
         </div>
         <div className="expand__content">
