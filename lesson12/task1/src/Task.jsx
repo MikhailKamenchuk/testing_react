@@ -36,17 +36,17 @@ const Task = ({ id, text, done, onChange, onDelete }) => {
 //   }
 // };
 
-Task.propTypes = {
-  id: PropTypes.string, 
-  text: PropTypes.string, 
-  done: PropTypes.bool.isRequired, 
-  onChange: PropTypes.func.isRequired, 
-  onDelete: PropTypes.func.isRequired
-}
+// Task.propTypes = {
+//   id: PropTypes.string, 
+//   text: PropTypes.string, 
+//   done: PropTypes.bool.isRequired, 
+//   onChange: PropTypes.func.isRequired, 
+//   onDelete: PropTypes.func.isRequired
+// }
 
-Task.defaultProps = {
-  id: Math.random(),
-  text: 'Without any text'
-}
+// Task.defaultProps = {
+//   id: Math.random(),
+//   text: 'Without any text'
+// }
 
 export default Task
