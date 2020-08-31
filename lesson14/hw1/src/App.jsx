@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Counter from './Counter';
+import ConnectionStatus from './ConnectionStatus';
 
 const App = () => (
-  <Counter />
+  <ConnectionStatus />
 )
 
 export default App
