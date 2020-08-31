@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import Counter from './Counter';
+import Clock from './Clock';
 
-const App = () => (
-  <Counter />
-)
+const App = () => {
+  const [visible, toggleVisible] = useState(true);
+
+  return (
+    <>
+      <button className="btn" onClick={() => toggleVisible(!visible)}>Hide Clocks</button>
+      {visible && <>
+        <Clock location={'New York'} offset={-5} />
+        <Clock location={'Kyiv'} offset={2} />
+        <Clock location={'London'} offset={0} />
+      </>}
+    </>
+  )
+}
 
 export default App
