@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Counter from './Counter';
+import Dimensions from './Dimensions';
 
 const App = () => (
-  <Counter />
+  <Dimensions />
 )
 
 export default App
