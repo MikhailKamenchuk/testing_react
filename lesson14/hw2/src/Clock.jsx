@@ -13,7 +13,10 @@ const Clock = ({ location, offset }) => {
   const [time, setTime] = useState(formatDate(getTimeWithOffset(offset)));
 
   useEffect(() => {
-    const timer = setInterval(() => setTime(formatDate(getTimeWithOffset(offset))), 1000);
+    const timer = setInterval(() => {
+      setTime(formatDate(getTimeWithOffset(offset))
+    )}, 1000);
+    
     return () => clearInterval(timer)
   }, []);
 
