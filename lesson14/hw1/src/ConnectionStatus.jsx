@@ -17,7 +17,7 @@ const ConnectionStatus = () => {
   }, [status]);
 
   const classes = classNames('status', { 'status_offline': status !== 'online' });
-  return <div className={classes}>{status.charAt(0).toUpperCase() + status.slice(1)}</div>
+  return <div className={classes}>{status}</div>
 }
 
 export default ConnectionStatus
